@@ -3,7 +3,7 @@ require( 'vector.lua' )
 require( 'entity.lua' )  
 require( 'pylon.lua' )    
 require( 'turret.lua' )     
-require( 'projectile2.lua' )
+require( 'projectile.lua' )
                           
 function love.load()
 
