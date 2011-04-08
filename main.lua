@@ -4,14 +4,18 @@ require( 'entity.lua' )
 require( 'pylon.lua' )    
 require( 'turret.lua' )     
 require( 'projectile.lua' )
-                          
+                   
 function love.load()
 
 end
 
-function love.draw()          
-	love.graphics.setColor( 50, 50, 50, 255 )    
-	love.graphics.print('Hello World!', 400, 300)  
+function love.draw()
+          
+	love.graphics.setColor( 90, 90, 90, 255 )            
+	 	
+	love.graphics.print('FPS: ' .. FPS, 400, 300)  
+	
+	love.graphics.print('NumEnts: ' .. NumEnts, 400, 320)    
 	
 	for k, ent in ipairs(EntList) do 
 		if ent:IsSpawned() then
@@ -40,6 +44,8 @@ end
 function love.update(dt)
    
 	GameTimer = GameTimer + dt
+	
+	FPS = 1 / dt
 	         
 	for k, ent in ipairs(EntList) do 
 		if ent:IsSpawned() then

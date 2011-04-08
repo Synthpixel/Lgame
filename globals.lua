@@ -5,4 +5,5 @@ ScreenW = 800
 ScreenH = 600                 
 EnergyDist = 128    
 EntityLookup = {}                   
-PulseTimer = 0
+PulseTimer = 0       
+FPS = 0
